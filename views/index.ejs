@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <style>
+       .body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(212, 183, 233); /* Light lavender background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Center the shopping cart container */
+.form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+}
+
+/* Style for h1 */
+.h1 {
+    color: salmon;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Style for h3 */
+.h3 {
+    color: darklavender; /* Dark lavender for h3 */
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Style for the buttons */
+.button {
+    background-color: darkslateblue;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: mediumpurple;
+}
+
+/* Style for the quantity input */
+.input[type="number"] {
+    width: 50px;
+    text-align: center;
+    margin: 0 5px;
+}
+
+/* Style for the submit button */
+.button[type="submit"] {
+    margin-top: 20px;
+    background-color: rgb(192, 157, 218);
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    color: rgb(17, 16, 16);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button[type="submit"]:hover {
+    background-color: rgb(119, 66, 171);
+    color:white;
+}
+    </style>
+    <script>
+        function updateQuantity(itemId, change) {
+            const quantityInput = document.getElementById(`${itemId}-quantity`);
+            let quantity = parseInt(quantityInput.value);
+            quantity += change;
+            if (quantity < 1) quantity = 1; // Prevent quantity from being less than 1
+            quantityInput.value = quantity;
+        }
+    </script>
+</head>
+
+<body class="body">
+   
+    <form class="form" action="/checkout" method="post">
+        <h1 class="h1">Shopping Cart</h1>
+        <div>
+            <h3 class="h3">GYM SHARK Hoodie</h3>
+            <p>Price: $50.00</p>
+            <button class="button" type="button" onclick="updateQuantity('nodejs', -1)">-</button>
+            <input type="number" id="nodejs-quantity" name="nodejs-quantity" value="1" min="1">
+            <button class="button" type="button" onclick="updateQuantity('nodejs', 1)">+</button>
+        </div>
+        <div>
+            <h3 class="h3">Nike T-Shirt</h3>
+            <p>Price: $40.00</p>
+            <button class="button" type="button" onclick="updateQuantity('javascript', -1)">-</button>
+            <input type="number" id="javascript-quantity" name="javascript-quantity" value="2" min="1">
+            <button class="button" type="button" onclick="updateQuantity('javascript', 1)">+</button>
+        </div>
+        <div>
+            <h3 class="h3">Puma T-Shirt</h3>
+            <p>Price: $20.00</p>
+            <button class="button" type="button" onclick="updateQuantity('reactjs', -1)">-</button>
+            <input type="number" id="reactjs-quantity" name="reactjs-quantity" value="3" min="1">
+            <button class="button" type="button" onclick="updateQuantity('reactjs', 1)">+</button>
+        </div>
+        <button class="button" type="submit">Proceed to Checkout</button>
+    </form>
+</body>
+
+</html>

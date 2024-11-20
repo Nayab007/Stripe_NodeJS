@@ -1,0 +1,72 @@
+/* General body styling */
+.body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(74, 74, 146); /* Light lavender background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Center the shopping cart container */
+.form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+}
+
+/* Style for h1 */
+.h1 {
+    color: salmon;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Style for h3 */
+.h3 {
+    color: darklavender; /* Dark lavender for h3 */
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Style for the buttons */
+.button {
+    background-color: darkslateblue;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: mediumpurple;
+}
+
+/* Style for the quantity input */
+.input[type="number"] {
+    width: 50px;
+    text-align: center;
+    margin: 0 5px;
+}
+
+/* Style for the submit button */
+.button[type="submit"] {
+    margin-top: 20px;
+    background-color: indigo;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button[type="submit"]:hover {
+    background-color: rebeccapurple;
+}

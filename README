@@ -1,7 +1,8 @@
-      In this project, I have integrated the Stripe Checkout with a Node.js project. I have used Express, EJS, and the official Stripe module to create a simple page with some products that will lead the buyer to the Stripe Checkout 
+ In this project, I have integrated the Stripe Checkout with a Node.js project. I have used Express, EJS, and the official Stripe module to create a simple page with some products that will lead the buyer to the Stripe Checkout 
 page and then complete the payment by passing the card details and shipping address. 
 
 https://github.com/user-attachments/assets/0ec7feff-615f-4939-a976-9ae1a808cee2
+
 
 
 
